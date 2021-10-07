@@ -11,5 +11,5 @@ npm install && npm start
 ## building & publishing
 
 ```bash
-npm install && npm build && cd dist && npx surge
+npm install && npm run build && cd dist && npx surge
 ```
