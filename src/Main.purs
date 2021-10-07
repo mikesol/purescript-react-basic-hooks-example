@@ -20,7 +20,6 @@ mkCounter :: Component Int
 mkCounter = do
   component "Counter" \initialValue -> React.do
     counter /\ setCounter <- useState initialValue
-
     pure
       $ R.button
           { onClick: handler_ do
@@ -35,4 +34,4 @@ main = do
   mkc <- mkCounter
   case container of
     Nothing -> throw "Container element not found."
-    Just c  -> render (mkc 0) c
+    Just c -> render (mkc 0) c
